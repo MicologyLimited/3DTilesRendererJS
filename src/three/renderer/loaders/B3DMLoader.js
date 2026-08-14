@@ -30,7 +30,8 @@ export class B3DMLoader extends B3DMLoaderBase {
 	parse( buffer ) {
 
 		const b3dm = super.parse( buffer );
-		const gltfBuffer = b3dm.glbBytes.slice().buffer;
+		// Optimization: use ArrayBuffer.slice directly instead of glbBytes.slice().buffer
+		const gltfBuffer = buffer.slice( b3dm.glbBytes.byteOffset, b3dm.glbBytes.byteOffset + b3dm.glbBytes.byteLength );
 		return new Promise( ( resolve, reject ) => {
 
 			const manager = this.manager;
