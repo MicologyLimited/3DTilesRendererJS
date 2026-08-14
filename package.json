@@ -35,11 +35,13 @@
     },
     "./core": {
       "types": "./src/core/renderer/index.d.ts",
-      "import": "./build/index.core.js"
+      "import": "./build/index.core.js",
+      "default": "./src/core/renderer/index.js"
     },
     "./three": {
       "types": "./src/three/renderer/index.d.ts",
-      "import": "./build/index.three.js"
+      "import": "./build/index.three.js",
+      "default": "./src/three/renderer/index.js"
     },
     "./r3f": {
       "types": "./src/r3f/index.d.ts",
@@ -51,11 +53,13 @@
     },
     "./core/plugins": {
       "types": "./src/core/plugins/index.d.ts",
-      "import": "./build/index.core-plugins.js"
+      "import": "./build/index.core-plugins.js",
+      "default": "./src/core/plugins/index.js"
     },
     "./three/plugins": {
       "types": "./src/three/plugins/index.d.ts",
-      "import": "./build/index.three-plugins.js"
+      "import": "./build/index.three-plugins.js",
+      "default": "./src/three/plugins/index.js"
     },
     "./src/*": {
       "types": "./src/*.d.ts",
